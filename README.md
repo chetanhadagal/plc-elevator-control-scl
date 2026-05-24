@@ -1,3 +1,5 @@
+Elevator (Lift) Control System Simulation Using Siemens TIA Portal and SCL
+
 The Elevator Control System is a comprehensive simulation project developed using Siemens TIA Portal with Structured Control Language (SCL) to model real-world elevator behavior. The primary goal of the project was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a WinCC Unified HMI interface, and a complete alarm and event logging system.
 
 The system manages floor requests from both cabin buttons and external hall call buttons, storing them in dedicated request flags for each floor. It dynamically selects the target floor based on pending requests and current elevator position using a LOOK algorithm — serving floors in the current direction of travel before reversing — which accurately reflects how real-world elevator controllers operate. The motor control logic ensures the elevator moves in the correct direction, stops precisely when the target is reached, and adjusts speed depending on the distance to the target floor.
