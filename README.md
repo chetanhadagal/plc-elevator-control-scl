@@ -32,7 +32,7 @@ The logic runs every scan cycle:
 10. **On arrival**, clear the served request and corresponding buttons, stop the motor, open the door, and restart the door timer.
 11. **Auto-close the door** after a timeout, but only if the doorway is clear.
 
-[SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
+[## The SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
 
 ## The SCL program
 
@@ -52,10 +52,10 @@ Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly co
 
 ## Tech
 
-- **Siemens TIA Portal** (v17/v18 — set to your version)
+- **Siemens TIA Portal** (v17 version)
 - **Structured Control Language (SCL)** for the control logic
-- **WinCC Unified** for the HMI (SIMATIC styling, animated shaft view)
-- Runs in **Simulation (PLCSIM / PLCSIM Advanced)**, no PLC hardware needed
+- **WinCC unified** for the HMI (SIMATIC styling, animated shaft view)
+- Runs in **Simulation (PLCSIM / PLCSIM Advanced)
 
 ## Run it
 
