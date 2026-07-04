@@ -1,13 +1,42 @@
-Elevator (Lift) Control System Simulation Using Siemens TIA Portal and SCL
+# Elevator (Lift) Control System Simulation Using Siemens TIA Portal and SCL
 
-The Elevator Control System is a comprehensive simulation project developed using Siemens TIA Portal with Structured Control Language (SCL) to model real-world elevator behavior. The primary goal of the project was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a WinCC Unified HMI interface, and a complete alarm and event logging system.
+The Elevator Control System is a comprehensive simulation project developed using **Siemens TIA Portal** with **Structured Control Language (SCL)** to model real-world elevator behavior. The primary goal was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a **WinCC Unified HMI** interface, and a complete alarm and event logging system.
 
-The system manages floor requests from both cabin buttons and external hall call buttons, storing them in dedicated request flags for each floor. It dynamically selects the target floor based on pending requests and current elevator position using a LOOK algorithm — serving floors in the current direction of travel before reversing — which accurately reflects how real-world elevator controllers operate. The motor control logic ensures the elevator moves in the correct direction, stops precisely when the target is reached, and adjusts speed depending on the distance to the target floor.
+## What it does
 
-A movement simulation assumes 5 seconds per floor, updating the elevator's virtual position and activating floor-specific sensors to track current floor status. Door operations are fully automated with timers, ensuring doors open for a fixed duration at each stop. Safety features include interlocks to prevent elevator movement when doors are open, mutual exclusion logic to avoid conflicting door signals, door obstruction detection, and the ability to manually open or close doors via cabin buttons. An emergency stop with fault latch and manual reset pattern ensures the system can be safely halted and resumed under fault conditions.
+- **Floor request handling** — manages requests from both cabin buttons and external hall call buttons, storing them in dedicated request flags for each floor
+- **LOOK algorithm dispatch** — dynamically selects the target floor based on pending requests and current position, serving floors in the current direction of travel before reversing
+- **Motor control** — ensures the elevator moves in the correct direction, stops precisely at the target floor, and adjusts speed depending on distance to target
+- **Movement simulation** — assumes 5 seconds per floor, updating the elevator's virtual position and activating floor-specific sensors
+- **Automated door control** — timer-driven doors that open for a fixed duration at each stop
+- **Safety interlocks**:
+  - Prevents elevator movement when doors are open
+  - Mutual exclusion logic to avoid conflicting door signals
+  - Door obstruction detection
+  - Manual door open/close override via cabin buttons
+- **Emergency stop** — fault latch with manual reset pattern to safely halt and resume the system under fault conditions
 
-The HMI screen, built in WinCC Unified using standard SIMATIC colour conventions, provides a graphical shaft view with animated cabin movement, door animation, hall call buttons, a full drive status panel, and a live alarm log — giving the operator a complete picture of the system state at all times.
+## HMI
 
-This project emphasises modularity and scalability, making it straightforward to extend for additional floors or integrate new features. The SCL code is organised into clearly commented sections with logical structure, making use of timers, conditional statements, boolean latching logic, edge detection, and LOOK-algorithm queuing to simulate realistic industrial control behaviour.
+Built in **WinCC Unified** using standard SIMATIC colour conventions:
 
-Feel free to use this project as a learning resource or a starting point for your own work. You can adapt, expand, and build on it to simulate more complex elevator systems, add priority request handling, integrate real hardware I/O, or explore other industrial automation applications.
+- Graphical shaft view with animated cabin movement
+- Door animation
+- Hall call buttons
+- Full drive status panel
+- Live alarm log
+
+Gives the operator a complete picture of system state at all times.
+
+## Design notes
+
+This project emphasises **modularity and scalability**, making it straightforward to extend for additional floors or integrate new features. The SCL code is organised into clearly commented sections, making use of timers, conditional statements, boolean latching logic, edge detection, and LOOK-algorithm queuing to simulate realistic industrial control behaviour.
+
+## Next steps
+
+Feel free to use this project as a learning resource or a starting point for your own work:
+
+- Add priority request handling
+- Integrate real hardware I/O
+- Simulate more complex elevator systems (multi-car dispatch, etc.)
+- Explore other industrial automation applications
