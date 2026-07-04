@@ -32,9 +32,9 @@ The logic runs every scan cycle:
 10. **On arrival**, clear the served request and corresponding buttons, stop the motor, open the door, and restart the door timer.
 11. **Auto-close the door** after a timeout, but only if the doorway is clear.
 
-[SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
-
 ## The SCL program
+
+[SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
 
 Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly commented sections:
 
