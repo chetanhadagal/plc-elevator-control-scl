@@ -32,7 +32,8 @@ The logic runs every scan cycle:
 10. **On arrival**, clear the served request and corresponding buttons, stop the motor, open the door, and restart the door timer.
 11. **Auto-close the door** after a timeout, but only if the doorway is clear.
 
-\`\`\`scl
+\`\`\`
+
 // -------------- INITIALISATION --------------
 // Run only once during first PLC scan 
 
@@ -336,6 +337,7 @@ END_IF;
 IF #Door_CLOSE AND NOT #Door_OPEN THEN
     #Door_CLOSE := FALSE;  
 END_IF;
+
 \`\`\`
 
 ## The SCL program
