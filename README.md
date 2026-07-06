@@ -45,6 +45,7 @@ Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly co
 <td><img width="682" height="360" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/82f4186e-0cf7-45b0-9224-2400c8184ebb" /> <td/>
 </tr>
 </table>
+
 - **Store floor requests** — hall call + cabin button flags per floor
 - **Target floor selection** — directional scan logic (services requests ahead of the current direction first)
 <table>
@@ -53,6 +54,7 @@ Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly co
 <td><img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/f1e7222e-12d1-4131-b5c0-11eff69d31f8" /> <td/>
 </tr>
 </table>
+
 - **Direction & speed selection** — sets `Motor_DIRECTION_UP` / `_DOWN` and slow/fast speed
 - **Door interlock logic** — obstruction sensor, manual open/close, mutual exclusion
 - **Motor start condition** — combines all interlocks into a single start permissive
