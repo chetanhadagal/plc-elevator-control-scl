@@ -1,8 +1,12 @@
 # Elevator (Lift) Control System Simulation Using Siemens TIA Portal and SCL
 
 The Elevator Control System is a comprehensive simulation project developed using **Siemens TIA Portal** with **Structured Control Language (SCL)** to model real-world elevator behavior. The primary goal was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a **WinCC Unified HMI** interface, and a complete alarm and event logging system.
-<img width="1365" height="720" alt="Screenshot 2026-05-24 180135" src="https://github.com/user-attachments/assets/b8c3401c-e2bf-4c64-a0c2-9198857c94ed" />
-<img width="1365" height="721" alt="Screenshot 2026-05-24 180008" src="https://github.com/user-attachments/assets/8b99b31d-6cd7-4f05-9849-80fe4538849c" />
+
+Uploading Screen Recording 2026-07-06 133212.mp4…
+
+<img width="928" height="662" alt="Screenshot 2026-07-06 132520" src="https://github.com/user-attachments/assets/0b9847d7-9ccc-4b31-a092-f24b40ec5046" />
+
+<img width="923" height="689" alt="Screenshot 2026-07-06 131430" src="https://github.com/user-attachments/assets/fac17d41-1d8e-48be-8444-c881defd5939" />
 
 ## What it does
 
@@ -35,10 +39,11 @@ The logic runs every scan cycle:
 11. **Auto-close the door** after a timeout, but only if the doorway is clear.
 
 ## The SCL program
-
 [SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
-<img width="1365" height="744" alt="Screenshot 2026-07-06 122023" src="https://github.com/user-attachments/assets/d7f7410c-4f9a-4f29-b7bb-9b64e53ec24e" />
-<img width="1365" height="746" alt="Screenshot 2026-07-06 122040" src="https://github.com/user-attachments/assets/06f51c84-7473-4c05-bf8c-40e08ee56f7c" />
+<img width="1365" height="720" alt="Screenshot 2026-07-06 131130" src="https://github.com/user-attachments/assets/c6c87452-734e-41cc-8b29-1b1751e044e4" />
+<img width="1365" height="719" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/94be90d3-3c1a-483c-bf16-c1753b583abc" />
+<img width="1365" height="719" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/59b8f149-6fc4-4b6e-b906-c9a66eaa0142" />
+<img width="1365" height="720" alt="Screenshot 2026-07-06 130955" src="https://github.com/user-attachments/assets/3ad5ea97-778b-469d-aa45-d9d917d77e9d" />
 
 Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly commented sections:
 
