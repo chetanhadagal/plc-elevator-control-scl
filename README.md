@@ -2,9 +2,6 @@
 
 The Elevator Control System is a comprehensive simulation project developed using **Siemens TIA Portal** with **Structured Control Language (SCL)** to model real-world elevator behavior. The primary goal was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a **WinCC Unified HMI** interface, and a complete alarm and event logging system.
 
-Uploading Screen Recording 2026-07-06 133212.mp4…
-Uploading Screen Recording 2026-07-06 133212.mp4…
-
 ## What it does
 
 - **Floor request handling** — manages requests from both cabin buttons and external hall call buttons, storing them in dedicated request flags for each floor
@@ -36,23 +33,26 @@ The logic runs every scan cycle:
 11. **Auto-close the door** after a timeout, but only if the doorway is clear.
 
 ## The SCL program
-
 [SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
-<table>
-<tr>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 131130" src="https://github.com/user-attachments/assets/c6c87452-734e-41cc-8b29-1b1751e044e4"/> <td/>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 131130" src="https://github.com/user-attachments/assets/c6c87452-734e-41cc-8b29-1b1751e044e4"/><td/>
-</tr>
-</table>
-<img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/94be90d3-3c1a-483c-bf16-c1753b583abc" />
-<img width="682" height="360" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/59b8f149-6fc4-4b6e-b906-c9a66eaa0142" /> <img width="682" height="360" alt="Screenshot 2026-07-06 130955" src="https://github.com/user-attachments/assets/3ad5ea97-778b-469d-aa45-d9d917d77e9d" />
 
 Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly commented sections:
 
 - **Initialisation** — first-scan reset of floor, requests, and outputs
 - **E-Stop & fault handling** — fault latch with manual reset, early `RETURN` on active fault
+<table>
+<tr>
+<td><img width="682" height="360" alt="Screenshot 2026-07-06 130955" src="https://github.com/user-attachments/assets/24655e57-21dc-48bd-9725-038a821dad17" /><td/>
+<td><img width="682" height="360" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/82f4186e-0cf7-45b0-9224-2400c8184ebb" /> <td/>
+</tr>
+</table>
 - **Store floor requests** — hall call + cabin button flags per floor
 - **Target floor selection** — directional scan logic (services requests ahead of the current direction first)
+<table>
+<tr>
+<td><img width="682" height="360" alt="Screenshot 2026-07-06 140041" src="https://github.com/user-attachments/assets/447beee2-d98d-43b3-a1fa-c59de365bd9a" /><td/>
+<td><img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/f1e7222e-12d1-4131-b5c0-11eff69d31f8" /> <td/>
+</tr>
+</table>
 - **Direction & speed selection** — sets `Motor_DIRECTION_UP` / `_DOWN` and slow/fast speed
 - **Door interlock logic** — obstruction sensor, manual open/close, mutual exclusion
 - **Motor start condition** — combines all interlocks into a single start permissive
