@@ -2,6 +2,8 @@
 
 The Elevator Control System is a comprehensive simulation project developed using **Siemens TIA Portal** with **Structured Control Language (SCL)** to model real-world elevator behavior. The primary goal was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a **WinCC Unified HMI** interface, and a complete alarm and event logging system.
 
+[HMI Simulation Video](https://drive.google.com/file/d/1ORebRIgv5x9WCqfYw74yigbKFxEO-v-8/view?usp=drivesdk)
+
 ## What it does
 
 - **Floor request handling** — manages requests from both cabin buttons and external hall call buttons, storing them in dedicated request flags for each floor
@@ -39,29 +41,29 @@ Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly co
 
 - **Initialisation** — first-scan reset of floor, requests, and outputs
 - **E-Stop & fault handling** — fault latch with manual reset, early `RETURN` on active fault
-<table>
-<tr>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 130955" src="https://github.com/user-attachments/assets/24655e57-21dc-48bd-9725-038a821dad17" /><td/>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/82f4186e-0cf7-45b0-9224-2400c8184ebb" /> <td/>
-</tr>
-</table>
+<table><tr><td><img width="682" height="360" alt="Screenshot 2026-07-06 210857" src="https://github.com/user-attachments/assets/14d51337-7400-424d-ac39-0e172a35b898" />
+ <td/><td><img width="682" height="360" alt="Screenshot 2026-07-06 210922" src="https://github.com/user-attachments/assets/baf3cdc2-36bf-4dee-8a78-0e12e89074c1" /><td/></tr></table>
 
 - **Store floor requests** — hall call + cabin button flags per floor
 - **Target floor selection** — directional scan logic (services requests ahead of the current direction first)
-<table>
-<tr>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 140041" src="https://github.com/user-attachments/assets/447beee2-d98d-43b3-a1fa-c59de365bd9a" /><td/>
-<td><img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/f1e7222e-12d1-4131-b5c0-11eff69d31f8" /> <td/>
-</tr>
-</table>
+<table><tr><td><img width="682" height="360" alt="Screenshot 2026-07-06 210940" src="https://github.com/user-attachments/assets/025cb5ff-40b1-441c-8142-db729871ddba" />
+ <td/><td><img width="682" height="360" alt="Screenshot 2026-07-06 211016" src="https://github.com/user-attachments/assets/06d99cdf-6380-4285-8f1b-c3c470105915" /><td/></tr></table>
 
 - **Direction & speed selection** — sets `Motor_DIRECTION_UP` / `_DOWN` and slow/fast speed
 - **Door interlock logic** — obstruction sensor, manual open/close, mutual exclusion
+<table><tr><td><img width="682" height="360" alt="Screenshot 2026-07-06 211235" src="https://github.com/user-attachments/assets/5813d107-f38a-45bc-baa0-b395c5f0eebf" /><td/>
+<td><img width="682" height="360" alt="Screenshot 2026-07-06 211252" src="https://github.com/user-attachments/assets/6c9bf402-c393-4db8-b73f-73db5affd8a1" /><td/></tr></table>
+
 - **Motor start condition** — combines all interlocks into a single start permissive
 - **Movement simulation** — 5 s/floor timer updates simulated position
+<table><tr><td><img width="682" height="360" alt="Screenshot 2026-07-06 211323" src="https://github.com/user-attachments/assets/09784413-c334-4fc4-9a2d-f71a61700737" /><td/>
+<td> <img width="682" height="360" alt="Screenshot 2026-07-06 211358" src="https://github.com/user-attachments/assets/f342de92-4b0f-4122-9f1c-e2bf726e2085" /><td/></tr></table>
+
 - **Floor sensor status** — derived from simulated position
 - **Arrival & request clearing** — clears requests/buttons, stops lift, opens door
-- **Door auto-close timer** — closes automatically after timeout if clear
+- - **Door auto-close timer** — closes automatically after timeout if clear
+<table><tr><td><img width="682" height="360" alt="Screenshot 2026-07-06 211417" src="https://github.com/user-attachments/assets/bc858077-af40-49f2-8010-aaa5db6d71cb" /><td/>
+<td> <img width="682" height="360" alt="Screenshot 2026-07-06 211501" src="https://github.com/user-attachments/assets/7c96c6df-c517-4523-819e-d4a3231ac671" /><td/></tr></table>
 
 ## Tech
 
