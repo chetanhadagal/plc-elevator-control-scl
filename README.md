@@ -37,7 +37,7 @@ The logic runs every scan cycle:
 
 ## The SCL program
 [SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
-<img width="682" height="360" alt="Screenshot 2026-07-06 131130" src="https://github.com/user-attachments/assets/c6c87452-734e-41cc-8b29-1b1751e044e4" /> <img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/94be90d3-3c1a-483c-bf16-c1753b583abc" />
+<img width="682" height="360" alt="Screenshot 2026-07-06 131130" src="https://github.com/user-attachments/assets/c6c87452-734e-41cc-8b29-1b1751e044e4" img width="682" height="360" alt="Screenshot 2026-07-06 131043" src="https://github.com/user-attachments/assets/94be90d3-3c1a-483c-bf16-c1753b583abc" />
 <img width="682" height="360" alt="Screenshot 2026-07-06 131012" src="https://github.com/user-attachments/assets/59b8f149-6fc4-4b6e-b906-c9a66eaa0142" /> <img width="682" height="360" alt="Screenshot 2026-07-06 130955" src="https://github.com/user-attachments/assets/3ad5ea97-778b-469d-aa45-d9d917d77e9d" />
 
 Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly commented sections:
