@@ -1,6 +1,8 @@
 # Elevator (Lift) Control System Simulation Using Siemens TIA Portal and SCL
 
 The Elevator Control System is a comprehensive simulation project developed using **Siemens TIA Portal** with **Structured Control Language (SCL)** to model real-world elevator behavior. The primary goal was to implement a fully functional lift system that can respond to user requests, move between floors, and control door operations — while incorporating safety interlocks, fault management, a **WinCC Unified HMI** interface, and a complete alarm and event logging system.
+<img width="1365" height="720" alt="Screenshot 2026-05-24 180135" src="https://github.com/user-attachments/assets/b8c3401c-e2bf-4c64-a0c2-9198857c94ed" />
+<img width="1365" height="721" alt="Screenshot 2026-05-24 180008" src="https://github.com/user-attachments/assets/8b99b31d-6cd7-4f05-9849-80fe4538849c" />
 
 ## What it does
 
@@ -35,6 +37,8 @@ The logic runs every scan cycle:
 ## The SCL program
 
 [SCL Code](https://github.com/chetanhadagal/plc-elevator-control-scl/blob/main/Elevator_Control_SCL.scl)
+<img width="1365" height="744" alt="Screenshot 2026-07-06 122023" src="https://github.com/user-attachments/assets/d7f7410c-4f9a-4f29-b7bb-9b64e53ec24e" />
+<img width="1365" height="746" alt="Screenshot 2026-07-06 122040" src="https://github.com/user-attachments/assets/06f51c84-7473-4c05-bf8c-40e08ee56f7c" />
 
 Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly commented sections:
 
