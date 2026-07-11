@@ -70,7 +70,7 @@ Single scan-cycle program (`Elevator_Control_SCL.scl`) organised into clearly co
 - **Siemens TIA Portal** (v17 version)
 - **Structured Control Language (SCL)** for the control logic
 - **WinCC unified** for the HMI (SIMATIC styling, animated shaft view)
-- Runs in **Simulation (PLCSIM / PLCSIM Advanced)
+- Runs in **Simulation** (PLCSIM / PLCSIM Advanced)
 
 ## Run it
 
